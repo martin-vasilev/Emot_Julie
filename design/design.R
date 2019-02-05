@@ -1,7 +1,7 @@
 
 # Martin R. Vasilev, 2017
 
-setwd("C:/Users/marti/Desktop/design")
+setwd("C:/Users/marti/Desktop/design/Emot_Julie")
 
 
 library(readr)
@@ -16,8 +16,8 @@ for(i in 1:51){
   design<- rbind(design, t)
 }
 
-design<- subset(design, item<73) # remove practice items
+design<- subset(design, item<25) # remove practice items
 
-table(design$item, design$cond)
+table(design$item, design$cond, design$frame)
 
-table(design$item, design$emot)
+table(design$sub, design$item, design$cond)
